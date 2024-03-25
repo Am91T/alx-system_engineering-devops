@@ -1,0 +1,17 @@
+# Connect to your server
+ssh ubuntu@your_server_ip
+
+# If the .ssh directory doesn't exist, create it
+mkdir -p ~/.ssh
+
+# Change permissions of the .ssh directory
+chmod 700 ~/.ssh
+
+# Navigate to the .ssh directory
+cd ~/.ssh
+
+# Create or append to the authorized_keys file
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN" >> authorized_keys
+
+# Change permissions of the authorized_keys file
+chmod 600 authorized_keys
