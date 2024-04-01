@@ -26,6 +26,23 @@ echo -e "\nSetting up some minor stuff.\n"
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
 
 server_config=\
+"
+defaults
+  mode http
+  timeout client 15s
+  timeout connect 10s
+  timeout server 15s
+  timeout http-request 10s
+
+frontend clickviral-tech-frontend
+    bind *:80
+    default_backend clickviral-tech-backend
+
+backend clickviral-tech-backend
+    balance roundrobin
+    server 475251-web-01 100.25.190.21:80 check
+    server 475251-web-02 54.160.77.90:80 check
+"
 
 # shellcheck disable=SC2154
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
