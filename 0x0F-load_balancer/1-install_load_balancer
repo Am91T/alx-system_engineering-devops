@@ -40,8 +40,8 @@ frontend clickviral-tech-frontend
 
 backend clickviral-tech-backend
     balance roundrobin
-    server 475251-web-01 100.25.190.21:80 check
-    server 475251-web-02 54.160.77.90:80 check
+    server 475251-web-01 54.152.17.101:80 check
+    server 475251-web-02 100.26.235.159:80 check
 "
 
 # shellcheck disable=SC2154
