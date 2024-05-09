@@ -23,10 +23,10 @@ The root cause of the slowdown was a failing disk on a database server. This dis
 
 **Improve Database Monitoring**: We will implement more granular monitoring of individual database servers, including disk health checks. This will allow for faster detection of potential hardware failures.
 
-**Redundancy Measures**: We will explore implementing redundancy for critical database components, such as a RAID configuration for storage. This will ensure continued operation in case of future hardware failures.
+<font color="red">**Redundancy Measures**</font>: We will explore implementing redundancy for critical database components, such as a RAID configuration for storage. This will ensure continued operation in case of future hardware failures.
 
-**Automated Failover**: Investigate and implement automated failover mechanisms for database servers. This would automatically switch to a secondary server in case of a primary server failure, minimizing downtime.
+<font color="red">**Automated Failover**</font>: Investigate and implement automated failover mechanisms for database servers. This would automatically switch to a secondary server in case of a primary server failure, minimizing downtime.
 
-**Scheduled Maintenance**: Implement scheduled maintenance windows for database servers to proactively identify and address potential issues.
+<font color="red">**Scheduled Maintenance**</font>: Implement scheduled maintenance windows for database servers to proactively identify and address potential issues.
 
 This postmortem serves as a learning experience. By implementing the corrective and preventative measures outlined above, we can minimize the risk of similar outages in the future and ensure a smoother user experience on our e-commerce platform.
